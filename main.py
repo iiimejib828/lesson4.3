@@ -152,6 +152,11 @@ class Zoo:
             return None
 
 
+def animal_sound(animals: [Animal,]):
+    print("Животные говорят:")
+    for t_animal in animals:
+        t_animal.make_sound()
+
 # Файл для сохранения данных зоопарка
 zoo_file = "zoo_data.pkl"
 
@@ -213,6 +218,7 @@ while True:
 
     elif choice == '5':
         zoo.show_animals()
+        animal_sound(zoo._animals)
 
     elif choice == '6':
         zoo.show_staff()
